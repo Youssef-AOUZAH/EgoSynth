@@ -1,0 +1,9 @@
+flowchart LR
+  A["<b>tasks.csv</b><br/>short task phrases<br/><i>e.g. 'open drawer'</i>"]
+  B["<b>Phase 1</b><br/>Gemma 3 12B<br/>prompt expansion"]
+  C["<b>Phase 2</b><br/>LTX-2.3 22B (two-stage)<br/>3 candidate clips per task"]
+  D["<b>Phase 3</b><br/>Qwen2.5-VL-72B (AWQ)<br/>referee, score 0-100"]
+  E["<b>Output</b><br/>best clip kept, others deleted<br/>eval_results.json"]
+  A --> B --> C --> D --> E
+  classDef box fill:#f4f6fb,stroke:#3b5998,stroke-width:1.5px,color:#111;
+  class A,B,C,D,E box;

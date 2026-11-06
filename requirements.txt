@@ -1,0 +1,27 @@
+# EgoSynth dependencies.
+# LTX-2 (ltx_pipelines) is installed separately, see README > Installation.
+
+# Core
+torch>=2.1.0
+transformers>=4.49.0   # Qwen2.5-VL support
+accelerate>=0.29.2
+numpy<2
+safetensors
+huggingface_hub
+sentencepiece
+protobuf
+
+# Referee (Qwen2.5-VL-72B AWQ + video decoding)
+qwen-vl-utils
+autoawq
+decord
+opencv-python
+torchvision
+
+# Video / misc utilities used by the original environment
+imageio
+ffmpeg-python
+einops
+tiktoken
+diffusers
+pandas
